@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		618EEB8F156305830079DCFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 618EEB8E156305830079DCFB /* UIKit.framework */; };
+		618EEB91156305830079DCFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 618EEB90156305830079DCFB /* Foundation.framework */; };
+		618EEB93156305830079DCFB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 618EEB92156305830079DCFB /* CoreGraphics.framework */; };
+		618EEB99156305830079DCFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 618EEB97156305830079DCFB /* InfoPlist.strings */; };
+		618EEB9B156305830079DCFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 618EEB9A156305830079DCFB /* main.m */; };
+		618EEB9F156305830079DCFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 618EEB9E156305830079DCFB /* AppDelegate.m */; };
+		618EEBAD156305830079DCFB /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 618EEBAC156305830079DCFB /* SenTestingKit.framework */; };
+		618EEBAE156305830079DCFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 618EEB8E156305830079DCFB /* UIKit.framework */; };
+		618EEBAF156305830079DCFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 618EEB90156305830079DCFB /* Foundation.framework */; };
+		618EEBB7156305830079DCFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 618EEBB5156305830079DCFB /* InfoPlist.strings */; };
+		618EEBBA156305830079DCFB /* Great_of_Britain_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 618EEBB9156305830079DCFB /* Great_of_Britain_iOSTests.m */; };
+		61B4A26A1563063E00EF0743 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61B4A2691563063E00EF0743 /* MainStoryboard.storyboard */; };
+		61B4A26D1563066800EF0743 /* IntroLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B4A26C1563066800EF0743 /* IntroLoader.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		618EEBB0156305830079DCFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 618EEB81156305830079DCFB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 618EEB89156305830079DCFB;
+			remoteInfo = "Great of Britain iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		618EEB8A156305830079DCFB /* Great of Britain iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Great of Britain iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		618EEB8E156305830079DCFB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		618EEB90156305830079DCFB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		618EEB92156305830079DCFB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		618EEB96156305830079DCFB /* Great of Britain iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Great of Britain iOS-Info.plist"; sourceTree = "<group>"; };
+		618EEB98156305830079DCFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		618EEB9A156305830079DCFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		618EEB9C156305830079DCFB /* Great of Britain iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Great of Britain iOS-Prefix.pch"; sourceTree = "<group>"; };
+		618EEB9D156305830079DCFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		618EEB9E156305830079DCFB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		618EEBAB156305830079DCFB /* Great of Britain iOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Great of Britain iOSTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		618EEBAC156305830079DCFB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		618EEBB4156305830079DCFB /* Great of Britain iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Great of Britain iOSTests-Info.plist"; sourceTree = "<group>"; };
+		618EEBB6156305830079DCFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		618EEBB8156305830079DCFB /* Great_of_Britain_iOSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Great_of_Britain_iOSTests.h; sourceTree = "<group>"; };
+		618EEBB9156305830079DCFB /* Great_of_Britain_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Great_of_Britain_iOSTests.m; sourceTree = "<group>"; };
+		61B4A2691563063E00EF0743 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		61B4A26B1563066800EF0743 /* IntroLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IntroLoader.h; path = "View Controllers/IntroLoader.h"; sourceTree = "<group>"; };
+		61B4A26C1563066800EF0743 /* IntroLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IntroLoader.m; path = "View Controllers/IntroLoader.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		618EEB87156305830079DCFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				618EEB8F156305830079DCFB /* UIKit.framework in Frameworks */,
+				618EEB91156305830079DCFB /* Foundation.framework in Frameworks */,
+				618EEB93156305830079DCFB /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		618EEBA7156305830079DCFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				618EEBAD156305830079DCFB /* SenTestingKit.framework in Frameworks */,
+				618EEBAE156305830079DCFB /* UIKit.framework in Frameworks */,
+				618EEBAF156305830079DCFB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		618EEB7F156305830079DCFB = {
+			isa = PBXGroup;
+			children = (
+				618EEB94156305830079DCFB /* Great of Britain iOS */,
+				618EEBB2156305830079DCFB /* Great of Britain iOSTests */,
+				618EEB8D156305830079DCFB /* Frameworks */,
+				618EEB8B156305830079DCFB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		618EEB8B156305830079DCFB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				618EEB8A156305830079DCFB /* Great of Britain iOS.app */,
+				618EEBAB156305830079DCFB /* Great of Britain iOSTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		618EEB8D156305830079DCFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				618EEB8E156305830079DCFB /* UIKit.framework */,
+				618EEB90156305830079DCFB /* Foundation.framework */,
+				618EEB92156305830079DCFB /* CoreGraphics.framework */,
+				618EEBAC156305830079DCFB /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		618EEB94156305830079DCFB /* Great of Britain iOS */ = {
+			isa = PBXGroup;
+			children = (
+				61B4A2681563063E00EF0743 /* Storyboard */,
+				61B4A266156305A800EF0743 /* View Controllers */,
+				618EEB9D156305830079DCFB /* AppDelegate.h */,
+				618EEB9E156305830079DCFB /* AppDelegate.m */,
+				618EEB95156305830079DCFB /* Supporting Files */,
+			);
+			path = "Great of Britain iOS";
+			sourceTree = "<group>";
+		};
+		618EEB95156305830079DCFB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				618EEB96156305830079DCFB /* Great of Britain iOS-Info.plist */,
+				618EEB97156305830079DCFB /* InfoPlist.strings */,
+				618EEB9A156305830079DCFB /* main.m */,
+				618EEB9C156305830079DCFB /* Great of Britain iOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		618EEBB2156305830079DCFB /* Great of Britain iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				618EEBB8156305830079DCFB /* Great_of_Britain_iOSTests.h */,
+				618EEBB9156305830079DCFB /* Great_of_Britain_iOSTests.m */,
+				618EEBB3156305830079DCFB /* Supporting Files */,
+			);
+			path = "Great of Britain iOSTests";
+			sourceTree = "<group>";
+		};
+		618EEBB3156305830079DCFB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				618EEBB4156305830079DCFB /* Great of Britain iOSTests-Info.plist */,
+				618EEBB5156305830079DCFB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		61B4A266156305A800EF0743 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				61B4A26B1563066800EF0743 /* IntroLoader.h */,
+				61B4A26C1563066800EF0743 /* IntroLoader.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		61B4A2681563063E00EF0743 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				61B4A2691563063E00EF0743 /* MainStoryboard.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		618EEB89156305830079DCFB /* Great of Britain iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 618EEBBD156305830079DCFB /* Build configuration list for PBXNativeTarget "Great of Britain iOS" */;
+			buildPhases = (
+				618EEB86156305830079DCFB /* Sources */,
+				618EEB87156305830079DCFB /* Frameworks */,
+				618EEB88156305830079DCFB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Great of Britain iOS";
+			productName = "Great of Britain iOS";
+			productReference = 618EEB8A156305830079DCFB /* Great of Britain iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		618EEBAA156305830079DCFB /* Great of Britain iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 618EEBC0156305830079DCFB /* Build configuration list for PBXNativeTarget "Great of Britain iOSTests" */;
+			buildPhases = (
+				618EEBA6156305830079DCFB /* Sources */,
+				618EEBA7156305830079DCFB /* Frameworks */,
+				618EEBA8156305830079DCFB /* Resources */,
+				618EEBA9156305830079DCFB /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				618EEBB1156305830079DCFB /* PBXTargetDependency */,
+			);
+			name = "Great of Britain iOSTests";
+			productName = "Great of Britain iOSTests";
+			productReference = 618EEBAB156305830079DCFB /* Great of Britain iOSTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		618EEB81156305830079DCFB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = Me;
+			};
+			buildConfigurationList = 618EEB84156305830079DCFB /* Build configuration list for PBXProject "Great of Britain iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 618EEB7F156305830079DCFB;
+			productRefGroup = 618EEB8B156305830079DCFB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				618EEB89156305830079DCFB /* Great of Britain iOS */,
+				618EEBAA156305830079DCFB /* Great of Britain iOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		618EEB88156305830079DCFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				618EEB99156305830079DCFB /* InfoPlist.strings in Resources */,
+				61B4A26A1563063E00EF0743 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		618EEBA8156305830079DCFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				618EEBB7156305830079DCFB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		618EEBA9156305830079DCFB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		618EEB86156305830079DCFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				618EEB9B156305830079DCFB /* main.m in Sources */,
+				618EEB9F156305830079DCFB /* AppDelegate.m in Sources */,
+				61B4A26D1563066800EF0743 /* IntroLoader.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		618EEBA6156305830079DCFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				618EEBBA156305830079DCFB /* Great_of_Britain_iOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		618EEBB1156305830079DCFB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 618EEB89156305830079DCFB /* Great of Britain iOS */;
+			targetProxy = 618EEBB0156305830079DCFB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		618EEB97156305830079DCFB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				618EEB98156305830079DCFB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		618EEBB5156305830079DCFB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				618EEBB6156305830079DCFB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		618EEBBB156305830079DCFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		618EEBBC156305830079DCFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		618EEBBE156305830079DCFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Great of Britain iOS/Great of Britain iOS-Prefix.pch";
+				INFOPLIST_FILE = "Great of Britain iOS/Great of Britain iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		618EEBBF156305830079DCFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Great of Britain iOS/Great of Britain iOS-Prefix.pch";
+				INFOPLIST_FILE = "Great of Britain iOS/Great of Britain iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		618EEBC1156305830079DCFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Great of Britain iOS.app/Great of Britain iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Great of Britain iOS/Great of Britain iOS-Prefix.pch";
+				INFOPLIST_FILE = "Great of Britain iOSTests/Great of Britain iOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		618EEBC2156305830079DCFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Great of Britain iOS.app/Great of Britain iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Great of Britain iOS/Great of Britain iOS-Prefix.pch";
+				INFOPLIST_FILE = "Great of Britain iOSTests/Great of Britain iOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		618EEB84156305830079DCFB /* Build configuration list for PBXProject "Great of Britain iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				618EEBBB156305830079DCFB /* Debug */,
+				618EEBBC156305830079DCFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		618EEBBD156305830079DCFB /* Build configuration list for PBXNativeTarget "Great of Britain iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				618EEBBE156305830079DCFB /* Debug */,
+				618EEBBF156305830079DCFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		618EEBC0156305830079DCFB /* Build configuration list for PBXNativeTarget "Great of Britain iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				618EEBC1156305830079DCFB /* Debug */,
+				618EEBC2156305830079DCFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 618EEB81156305830079DCFB /* Project object */;
+}
