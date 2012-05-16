@@ -1,30 +1,19 @@
 //
-//  CameraTab.m
+//  SettingsTab.m
 //  Great of Britain iOS
 //
-//  Created by David Ford on 15/05/2012.
+//  Created by David Ford on 16/05/2012.
 //  Copyright (c) 2012 Me. All rights reserved.
 //
 
-#import "CameraTab.h"
+#import "SettingsTab.h"
 
-@implementation CameraTab
+@implementation SettingsTab
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self startCamera];
     self.view.backgroundColor = [UIColor clearColor];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [self startCamera];
-}
-
-- (void)startCamera
-{
-    
 }
 
 - (void)viewDidUnload

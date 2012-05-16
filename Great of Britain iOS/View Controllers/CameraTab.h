@@ -10,4 +10,6 @@
 
 @interface CameraTab : UIViewController
 
+- (void)startCamera;
+
 @end

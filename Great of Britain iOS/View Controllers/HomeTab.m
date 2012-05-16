@@ -14,11 +14,14 @@
 {
     [super viewDidLoad];
     [self customTabBarController];
+    self.view.backgroundColor = [UIColor clearColor];
+
 	// Do any additional setup after loading the view.
 }
 
 - (void)viewDidUnload
 {
+    [self setView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -34,26 +37,18 @@
     UIImage *selectedImage2 = [UIImage imageNamed:@"tb_3_down.png"];
     UIImage *unselectedImage2 = [UIImage imageNamed:@"tb_3_up.png"];
     
-    UIImage *selectedImage3 = [UIImage imageNamed:@"tb_4_down.png"];
-    UIImage *unselectedImage3 = [UIImage imageNamed:@"tb_4_up.png"];
-    
-    UIImage *selectedImage4 = [UIImage imageNamed:@"tb_5_down.png"];
-    UIImage *unselectedImage4 = [UIImage imageNamed:@"tb_5_up.png"];
-    
     UITabBar *tabBar = self.tabBarController.tabBar;
     UITabBarItem *item0 = [tabBar.items objectAtIndex:0];
     UITabBarItem *item1 = [tabBar.items objectAtIndex:1];
     UITabBarItem *item2 = [tabBar.items objectAtIndex:2];
-    UITabBarItem *item3 = [tabBar.items objectAtIndex:3];
-    UITabBarItem *item4 = [tabBar.items objectAtIndex:4];
     
-    self.tabBarController.tabBar.frame = CGRectMake(0, 418, 320, 44);
+    self.tabBarController.tabBar.frame = CGRectMake(0, 430, 320, 50);
+    
+    [self.tabBarController.tabBar setBackgroundImage:[UIImage imageNamed:@"tb_tabBar_BG.png"]];
     
     [item0 setFinishedSelectedImage:selectedImage0 withFinishedUnselectedImage:unselectedImage0];
     [item1 setFinishedSelectedImage:selectedImage1 withFinishedUnselectedImage:unselectedImage1];
     [item2 setFinishedSelectedImage:selectedImage2 withFinishedUnselectedImage:unselectedImage2];
-    [item3 setFinishedSelectedImage:selectedImage3 withFinishedUnselectedImage:unselectedImage3];
-    [item4 setFinishedSelectedImage:selectedImage4 withFinishedUnselectedImage:unselectedImage4];
     
 }
 
