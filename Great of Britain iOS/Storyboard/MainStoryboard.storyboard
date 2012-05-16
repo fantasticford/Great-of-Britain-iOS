@@ -34,22 +34,6 @@
             </objects>
             <point key="canvasLocation" x="502" y="63"/>
         </scene>
-        <!--Home Tab-->
-        <scene sceneID="CBy-2P-djI">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WWz-mn-iLM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="1gK-Xc-sQr" customClass="HomeTab" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gcC-he-n64">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" id="1nw-OE-NOI"/>
-                    <navigationItem key="navigationItem" id="M2u-Ak-PlM"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="1957" y="-561"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="gYZ-0e-R8O">
             <objects>
@@ -80,11 +64,41 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="1gK-Xc-sQr" kind="relationship" relationship="rootViewController" id="vN8-ze-jSY"/>
+                        <segue destination="FY4-QL-gDc" kind="relationship" relationship="rootViewController" id="2Sf-La-fn5"/>
                     </connections>
                 </navigationController>
             </objects>
             <point key="canvasLocation" x="1486" y="-561"/>
+        </scene>
+        <!--Home Tab-->
+        <scene sceneID="kBl-ZR-Dy3">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ka8-z4-doK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="FY4-QL-gDc" customClass="HomeTab" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="ANh-Y9-fXJ">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="imageCell" rowHeight="80" id="tge-NA-Bwj">
+                                <rect key="frame" x="0.0" y="22" width="320" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FY4-QL-gDc" id="RNt-wL-NXf"/>
+                            <outlet property="delegate" destination="FY4-QL-gDc" id="vJd-1U-tyD"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="ozt-G1-OUO"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="1957" y="-561"/>
         </scene>
         <!--Camera Tab-->
         <scene sceneID="gFV-sO-bLC">
@@ -156,8 +170,11 @@
         <class className="CameraTab" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CameraTab.h"/>
         </class>
-        <class className="HomeTab" superclassName="UIViewController">
+        <class className="HomeTab" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HomeTab.h"/>
+            <relationships>
+                <relationship kind="outlet" name="streamImages" candidateClass="NSMutableArray"/>
+            </relationships>
         </class>
         <class className="SettingsTab" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsTab.h"/>

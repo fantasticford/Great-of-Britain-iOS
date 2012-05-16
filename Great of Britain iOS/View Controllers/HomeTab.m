@@ -10,10 +10,13 @@
 
 @implementation HomeTab
 
+@synthesize streamImages = _streamImages;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self customTabBarController];
+    [self loadImages];
     self.view.backgroundColor = [UIColor clearColor];
 
 	// Do any additional setup after loading the view.
@@ -50,6 +53,68 @@
     [item1 setFinishedSelectedImage:selectedImage1 withFinishedUnselectedImage:unselectedImage1];
     [item2 setFinishedSelectedImage:selectedImage2 withFinishedUnselectedImage:unselectedImage2];
     
+}
+
+- (void)loadImages
+{
+    self.streamImages = [[NSMutableArray alloc] init];
+   
+    for(int r = 0; r < 10; r++){
+        
+        NSMutableArray *threeImageSet = [[NSMutableArray alloc] init];
+        
+        for(int t = 0; t < 4; t++){
+            
+            NSMutableDictionary *singleImageSet = [[NSMutableDictionary alloc] init];
+
+            NSString *imageURL = @"http://upload.wikimedia.org/wikipedia/commons/5/58/1NumberOneInCircle.png";
+            NSString *imageUser = @"Google";
+            
+            [singleImageSet setValue:imageURL forKey:@"imageURL"];
+            [singleImageSet setValue:imageUser forKey:@"imageUser"];
+            
+            [threeImageSet addObject:singleImageSet];
+        }
+        
+        [self.streamImages addObject:threeImageSet];
+
+    }
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if([self.streamImages count] != 0) return [self.streamImages count];
+    else return 1;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"imageCell"];
+    
+    NSArray *singleRowArray = [self.streamImages objectAtIndex:indexPath.row];
+    
+    for(int c = 0; c < [singleRowArray count]; c++){
+        int gap = (c * 80) + 4;
+        
+        UIView *imageThumbView = [[UIView alloc] initWithFrame:CGRectMake(gap, 4, 73, 73)];
+        imageThumbView.backgroundColor = [UIColor colorWithRed:0.204 green:0.388 blue:0.631 alpha:1];
+        
+        
+        
+        
+        int imageNumber = ((indexPath.row + 1) + c) + (indexPath.row * 2);
+        //int imageNumber = (c + 1) + indexPath.row;
+        
+        UILabel *numberLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 50, 50)];
+        numberLabel.text = [NSString stringWithFormat:@"%d", imageNumber];
+        numberLabel.textColor = [UIColor colorWithRed:1.000 green:1.000 blue:1.000 alpha:1];
+        numberLabel.backgroundColor = [UIColor clearColor];
+        
+        [imageThumbView addSubview:numberLabel];
+        
+        [cell addSubview:imageThumbView];
+    }
+    return cell;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeTab : UIViewController
+@interface HomeTab : UITableViewController
+
+@property (strong, nonatomic) IBOutlet NSMutableArray *streamImages;
 
 - (void)customTabBarController;
+- (void)loadImages;
 
 @end
