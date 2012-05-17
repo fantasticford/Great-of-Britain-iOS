@@ -11,6 +11,7 @@
 @implementation HomeTab
 
 @synthesize streamImages = _streamImages;
+@synthesize imageButton = _imageButton;
 
 - (void)viewDidLoad
 {
@@ -66,10 +67,14 @@
         for(int t = 0; t < 4; t++){
             
             NSMutableDictionary *singleImageSet = [[NSMutableDictionary alloc] init];
-
+            
+            int no = ((r * 4) + t) + 1;
+            
+            NSString *imageNumber = [NSString stringWithFormat:@"%d", no];
             NSString *imageURL = @"http://upload.wikimedia.org/wikipedia/commons/5/58/1NumberOneInCircle.png";
             NSString *imageUser = @"Google";
             
+            [singleImageSet setValue:imageNumber forKey:@"imageNumber"];
             [singleImageSet setValue:imageURL forKey:@"imageURL"];
             [singleImageSet setValue:imageUser forKey:@"imageUser"];
             
@@ -96,25 +101,35 @@
     for(int c = 0; c < [singleRowArray count]; c++){
         int gap = (c * 80) + 4;
         
-        UIView *imageThumbView = [[UIView alloc] initWithFrame:CGRectMake(gap, 4, 73, 73)];
-        imageThumbView.backgroundColor = [UIColor colorWithRed:0.204 green:0.388 blue:0.631 alpha:1];
-        
-        
-        
-        
-        int imageNumber = ((indexPath.row + 1) + c) + (indexPath.row * 2);
-        //int imageNumber = (c + 1) + indexPath.row;
+        NSDictionary *singleImageDict = [singleRowArray objectAtIndex:c];
+                
+        NSString *imageURL = [singleImageDict objectForKey:@"imageURL"];
+        NSString *imageUser = [singleImageDict objectForKey:@"imageUser"];
+        NSString *imageNumber = [singleImageDict objectForKey:@"imageNumber"];
+                
+        self.imageButton = [[UIButton alloc] initWithFrame:CGRectMake(gap, 4, 73, 73)];
+        self.imageButton.backgroundColor = [UIColor colorWithRed:0.000 green:0.592 blue:0.294 alpha:1.];
         
         UILabel *numberLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 50, 50)];
-        numberLabel.text = [NSString stringWithFormat:@"%d", imageNumber];
+        numberLabel.text = [NSString stringWithFormat:@"%@", imageNumber];
         numberLabel.textColor = [UIColor colorWithRed:1.000 green:1.000 blue:1.000 alpha:1];
         numberLabel.backgroundColor = [UIColor clearColor];
         
-        [imageThumbView addSubview:numberLabel];
+        //[imageThumbView addSubview:numberLabel];
+        [self.imageButton addSubview:numberLabel];
+        [self.imageButton setEnabled:YES];
         
-        [cell addSubview:imageThumbView];
+        [self.imageButton addTarget:self action:@selector(imageButtonAction) forControlEvents:UIControlEventTouchDown];
+
+        
+        [cell addSubview:self.imageButton];
     }
     return cell;
+}
+
+- (void)imageButtonAction
+{
+    NSLog(@"Button Press %d", self.imageButton.version);
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

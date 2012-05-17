@@ -11,6 +11,7 @@
 @interface HomeTab : UITableViewController
 
 @property (strong, nonatomic) IBOutlet NSMutableArray *streamImages;
+@property (strong, nonatomic) IBOutlet UIButton *imageButton;
 
 - (void)customTabBarController;
 - (void)loadImages;

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingsTab : UIViewController
+@interface SettingsTab : UITableViewController
 
 @end
