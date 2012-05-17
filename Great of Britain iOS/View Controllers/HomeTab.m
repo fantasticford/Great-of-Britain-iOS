@@ -19,19 +19,20 @@
     [self customTabBarController];
     [self loadImages];
     self.view.backgroundColor = [UIColor clearColor];
-
-	// Do any additional setup after loading the view.
 }
 
 - (void)viewDidUnload
 {
     [self setView:nil];
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
 }
 
 - (void)customTabBarController
 {
+    UIImage *barLogoImage = [UIImage imageNamed: @"hp_GOB.png"];
+    UIImageView *navigationImage = [[UIImageView alloc] initWithImage: barLogoImage];
+    self.navigationItem.titleView = navigationImage;
+    
     UIImage *selectedImage0 = [UIImage imageNamed:@"tb_1_down.png"];
     UIImage *unselectedImage0 = [UIImage imageNamed:@"tb_1_up.png"];
     
@@ -60,7 +61,7 @@
 {
     self.streamImages = [[NSMutableArray alloc] init];
    
-    for(int r = 0; r < 10; r++){
+    for(int r = 0; r < 12; r++){
         
         NSMutableArray *threeImageSet = [[NSMutableArray alloc] init];
         
@@ -88,48 +89,55 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if([self.streamImages count] != 0) return [self.streamImages count];
+    if([self.streamImages count] != 0) return [self.streamImages count] + 1;
     else return 1;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"imageCell"];
-    
-    NSArray *singleRowArray = [self.streamImages objectAtIndex:indexPath.row];
-    
-    for(int c = 0; c < [singleRowArray count]; c++){
-        int gap = (c * 80) + 4;
+    if(indexPath.row == [self.streamImages count]){
         
-        NSDictionary *singleImageDict = [singleRowArray objectAtIndex:c];
-                
-        NSString *imageURL = [singleImageDict objectForKey:@"imageURL"];
-        NSString *imageUser = [singleImageDict objectForKey:@"imageUser"];
-        NSString *imageNumber = [singleImageDict objectForKey:@"imageNumber"];
-                
-        self.imageButton = [[UIButton alloc] initWithFrame:CGRectMake(gap, 4, 73, 73)];
-        self.imageButton.backgroundColor = [UIColor colorWithRed:0.000 green:0.592 blue:0.294 alpha:1.];
-        
-        UILabel *numberLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 50, 50)];
-        numberLabel.text = [NSString stringWithFormat:@"%@", imageNumber];
-        numberLabel.textColor = [UIColor colorWithRed:1.000 green:1.000 blue:1.000 alpha:1];
-        numberLabel.backgroundColor = [UIColor clearColor];
-        
-        //[imageThumbView addSubview:numberLabel];
-        [self.imageButton addSubview:numberLabel];
-        [self.imageButton setEnabled:YES];
-        
-        [self.imageButton addTarget:self action:@selector(imageButtonAction) forControlEvents:UIControlEventTouchDown];
+        UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"loadMoreCell"];
+        return cell;
 
+    } else {
         
-        [cell addSubview:self.imageButton];
+        UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"imageCell"];
+        
+        NSArray *singleRowArray = [self.streamImages objectAtIndex:indexPath.row];
+        
+        for(int c = 0; c < [singleRowArray count]; c++){
+            int gap = (c * 80) + 4;
+            
+            NSDictionary *singleImageDict = [singleRowArray objectAtIndex:c];
+            
+            NSString *imageURL = [singleImageDict objectForKey:@"imageURL"];
+            NSString *imageUser = [singleImageDict objectForKey:@"imageUser"];
+            NSString *imageNumber = [singleImageDict objectForKey:@"imageNumber"];
+            
+            self.imageButton = [[UIButton alloc] initWithFrame:CGRectMake(gap, 4, 73, 73)];
+            self.imageButton.backgroundColor = [UIColor colorWithRed:0.000 green:0.424 blue:0.671 alpha:1];
+            
+            UILabel *numberLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 50, 50)];
+            numberLabel.text = [NSString stringWithFormat:@"%@", imageNumber];
+            numberLabel.textColor = [UIColor colorWithRed:1.000 green:1.000 blue:1.000 alpha:1];
+            numberLabel.backgroundColor = [UIColor clearColor];
+            
+            [self.imageButton addSubview:numberLabel];
+            [self.imageButton addTarget:self action:@selector(imageButtonAction:) forControlEvents:UIControlEventTouchDown];
+            [self.imageButton setEnabled:YES];
+            
+            [cell addSubview:self.imageButton];
+        }
+        
+        
+        return cell;
     }
-    return cell;
 }
 
-- (void)imageButtonAction
+- (IBAction)imageButtonAction:(id)sender
 {
-    NSLog(@"Button Press %d", self.imageButton.version);
+    NSLog(@"Button Press");
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

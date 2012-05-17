@@ -7,13 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SystemConfiguration/SystemConfiguration.h>
+#import "PullRefreshTableViewController.h"
 
-@interface HomeTab : UITableViewController
+@interface HomeTab : PullRefreshTableViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet NSMutableArray *streamImages;
 @property (strong, nonatomic) IBOutlet UIButton *imageButton;
 
 - (void)customTabBarController;
 - (void)loadImages;
+- (IBAction)imageButtonAction:(id)sender;
 
 @end

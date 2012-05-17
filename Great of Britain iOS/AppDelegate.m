@@ -21,16 +21,9 @@
     UIImage *backgroundImage = [UIImage imageNamed:@"ge_navBar.png"];
     [navigationBarProxy setBackgroundImage:backgroundImage forBarMetrics:UIBarMetricsDefault];
     
-    NSDictionary *titleAttributes = [NSDictionary dictionaryWithObject:[UIFont fontWithName:@"ArialRoundedMTBold" size:20] forKey:UITextAttributeFont];
-    navigationBarProxy.titleTextAttributes = titleAttributes;
-    
     // Set the default tint for all bar button items
     UIColor *tintColour = [UIColor colorWithRed:0.000 green:0.427 blue:0.733 alpha:1.];
     [[UIBarButtonItem appearance] setTintColor:tintColour];
-    
-    // Set the default text attributes for all bar button items
-    NSDictionary *buttonAttributes = [NSDictionary dictionaryWithObject:[UIFont fontWithName:@"ArialRoundedMTBold" size:12] forKey:UITextAttributeFont];
-    [[UIBarButtonItem appearance] setTitleTextAttributes:buttonAttributes forState:UIControlStateNormal];
     
     // The chosen font has unusual padding so finally adjust the offsets
     UIOffset titleOffset = UIOffsetMake(0, 0);
